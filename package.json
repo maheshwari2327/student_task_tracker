@@ -1,0 +1,13 @@
+{
+  "name": "day6.1",
+  "version": "1.0.0",
+  "description": "A beginner-friendly web application built with **Python Flask**, **SQLite3**, and vanilla **HTML/CSS/JavaScript**. It lets students track their homework, assignments, and study tasks with ease.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

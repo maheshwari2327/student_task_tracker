@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Tracker</title>
+    <!-- Link to the custom CSS stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Main Application Card -->
+        <div class="card">
+            <!-- Header Section -->
+            <header class="header">
+                <div class="badge">Student Planner</div>
+                <h1>Task Tracker</h1>
+                <p class="subtitle">Stay organized and get your assignments done on time.</p>
+            </header>
+
+            <!-- Task Input Form -->
+            <form id="task-form" class="task-form">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="task-input" 
+                        name="title" 
+                        placeholder="Add a new assignment or study task..." 
+                        maxlength="250"
+                        autocomplete="off"
+                    >
+                    <button type="submit" id="add-btn">Add</button>
+                </div>
+                <!-- Validation Error Message Alert -->
+                <div id="error-message" class="error-banner" style="display: none;"></div>
+            </form>
+
+            <!-- Tasks Header & Counter -->
+            <div class="tasks-header">
+                <h2>All Tasks</h2>
+                <span id="task-count" class="counter-badge">0 tasks</span>
+            </div>
+
+            <!-- Empty State Display -->
+            <div id="empty-state" class="empty-state" style="display: none;">
+                <p>No tasks yet! Type an assignment above and click "Add".</p>
+            </div>
+
+            <!-- Task Items List -->
+            <ul id="task-list" class="task-list"></ul>
+        </div>
+    </div>
+
+    <!-- Frontend logic with fetch() -->
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
